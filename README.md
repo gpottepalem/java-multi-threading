@@ -1,7 +1,7 @@
 # Overview
 [![Build Status](https://travis-ci.org/gpottepalem/java-multi-threading.svg?branch=master)](https://travis-ci.org/gpottepalem/java-multi-threading)
 
-[![Actions Status](https://xxx.execute-api.us-west-2.amazonaws.com/production/badge/gpottepalem/java-multi-threading)](https://xxx.execute-api.us-west-2.amazonaws.com/production/results/gpottepalem/java-multi-threading)
+[![Actions Status](https://github.com/gpottepalem/java-multi-threading/workflows/javaMultiThreading/badge.svg)](https://github.com/gpottepalem/java-multi-threading/actions)
 
 This is a simple Java project containing two Java applications that can be run independently. Leverages some of the
 multi-threading capabilities supported in Java.
