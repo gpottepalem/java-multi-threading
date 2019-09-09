@@ -39,8 +39,8 @@ public class LogWriter implements Runnable {
 
         for (int i = 0; i < random.nextInt(10); i++) {
             synchronized (bufferedWriter) {
-                commitLogId.id++;
-                String log = categoryName + ": " + commitLogId.id + ": sample log by " +
+                int commitId = commitLogId.nextId();
+                String log = categoryName + ": " + commitId + ": sample log by " +
                     this.getClass().getSimpleName() + " :" + Thread.currentThread().getName();
                 System.out.println(log);
                 try {
