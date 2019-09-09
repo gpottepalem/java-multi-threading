@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'groovy' // for spock support
+}
+
+group 'java-multi-threading'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // spock support for tests
+    testCompile 'org.codehaus.groovy:groovy-all:2.5.8'
+    testCompile "org.spockframework:spock-core:1.3-groovy-2.5"
+}
+
+task(runCommitLogApp, dependsOn: 'classes', type: JavaExec) {
+    main = 'com.interactions.log.CommitLogApplication'
+    classpath = sourceSets.main.runtimeClasspath
+//    args 'mrhaki'
+    systemProperty 'simple.message', 'Running CommitLogApplication...'
+}
+
+task(runReadLogApp, dependsOn: 'classes', type: JavaExec) {
+    main = 'com.interactions.log.ReadLogApplication'
+    classpath = sourceSets.main.runtimeClasspath
+//    args 'mrhaki'
+    systemProperty 'simple.message', 'Running CommitLogApplication...'
+}

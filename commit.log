@@ -1,0 +1,15 @@
+A: 101: sample log by LogWriter :writer-thread-A1
+B: 102: sample log by LogWriter :writer-thread-B2
+B: 103: sample log by LogWriter :writer-thread-B2
+B: 104: sample log by LogWriter :writer-thread-B2
+B: 105: sample log by LogWriter :writer-thread-B2
+B: 106: sample log by LogWriter :writer-thread-B2
+A: 107: sample log by LogWriter :writer-thread-A2
+B: 108: sample log by LogWriter :writer-thread-B1
+B: 109: sample log by LogWriter :writer-thread-B1
+B: 110: sample log by LogWriter :writer-thread-B1
+B: 111: sample log by LogWriter :writer-thread-B1
+B: 112: sample log by LogWriter :writer-thread-B3
+B: 113: sample log by LogWriter :writer-thread-B3
+A: 114: sample log by LogWriter :writer-thread-A2
+A: 115: sample log by LogWriter :writer-thread-A2
