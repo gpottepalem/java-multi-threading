@@ -7,14 +7,14 @@ multi-threading capabilities supported in Java.
 ---
 > Author: Giri Pottepalem
 ---
-##1. CommitLogApplication
+## 1. CommitLogApplication
 
 Writes log messages to `commit.log` file with the support of configurable multiple writer threads of two categories: 
 `A` and `B`.
 
 ![](CommitLogApplicationDesign.jpg)
 
-###Assumptions
+### Assumptions
 * Requires application configuration file: `application.properties`.
 * The configuration file must have the following keys and values.
   * `A = n #n is the number of commit writers of category A`
@@ -31,14 +31,14 @@ e.g. log message written to the log file
 B: 114: sample log by LogWriter :writer-thread-B3
 ```
 
-##2. ReadLogApplication
+## 2. ReadLogApplication
 
 Reads log messages from from `commit.log` file with the support of configurable multiple reader threads that print 
 log messages to the console .
 
 ![](ReadLogApplicationDesign.jpg)
 
-###Assumptions
+### Assumptions
 * Requires the existence of `commit.log` file to read log messages from.
 * Each reader thread gets a log message written by the writer thread of the same category:`A` or `B`. This act of
 connecting specific category(e.g.`B`) of writer threads to the same category of reader (e.g.`B`) threads is co-ordinated
