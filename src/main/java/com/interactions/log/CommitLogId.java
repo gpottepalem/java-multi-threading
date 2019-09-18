@@ -1,5 +1,7 @@
 package com.interactions.log;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * Holds a volatile id for use across multiple threads.
  *
@@ -8,17 +10,16 @@ package com.interactions.log;
  */
 public class CommitLogId {
     /**
-     * Volatile commit id.
+     * Thread-safe, non-blocking (no synchronized or lock overhead) atomic commit id.
      * A unique id across log messages logged by various categories of {@link LogWriter}s
      * */
-    private volatile int id = 100;
+    private AtomicInteger id = new AtomicInteger(100);
 
     /**
-     * Increments id by and and returns.
+     * Increments id by 1 and and returns.
      * @return next id
      */
     public int nextId() {
-        id++;
-        return id;
+        return id.addAndGet(1);
     }
 }
